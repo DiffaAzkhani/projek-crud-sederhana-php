@@ -77,7 +77,7 @@ if (isset($_GET['hpsdata'])) {
                 <td>$tampil[nama_mahasiswa]</td>
                 <td>$tampil[ipk_mahasiswa]</td>
                 <td><a href='?hpsdata=$tampil[nim_mahasiswa]'>Hapus</a></td>
-                <td><a href='?edtdata=$tampil[nim_mahasiswa]'>Edit</a></td>
+                <td><a href='edit-data.php?edtdata=$tampil[nim_mahasiswa]'>Edit</a></td>
                 </tr>";
                 $no++;
             }
