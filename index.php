@@ -10,6 +10,13 @@ if (isset($_POST['simpan'])) {
 
     header('location: index.php');
 }
+
+// Program Hapus Data
+if (isset($_GET['hpsdata'])) {
+    mysqli_query($koneksi, "DELETE FROM mahasiswa WHERE nim_mahasiswa = '$_GET[hpsdata]'");
+
+    header('location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
