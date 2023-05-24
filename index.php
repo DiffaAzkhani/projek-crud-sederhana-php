@@ -1,5 +1,15 @@
 <?php
 include 'koneksi.php';
+
+// Program Simpan Data
+if (isset($_POST['simpan'])) {
+    mysqli_query($koneksi, "INSERT INTO mahasiswa SET
+    nim_mahasiswa = '$_POST[nim]',
+    nama_mahasiswa = '$_POST[nama]',
+    ipk_mahasiswa = '$_POST[ipk]'");
+
+    header('location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +43,7 @@ include 'koneksi.php';
                 <td><input type="text" name="ipk"></td>
             </tr>
             <tr>
-                <td><input type="button" value="Simpan Data" name="simpan"></td>
+                <td><input type="submit" value="Simpan Data" name="simpan"></td>
             </tr>
         </table>
     </form>
